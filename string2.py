@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = 'Tyrell Williams'
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -12,7 +12,7 @@ __author__ = "???"
 
 # Instructions:
 # Complete each of these string exercises in the same way as the
-# previous String1 excercises.
+# previous String1 exercises.
 
 # D. verbing
 # Given a string, if its length is at least 3, add 'ing' to its
@@ -23,8 +23,13 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
+    if s.endswith('ing'):
+        return s + 'ly'
+    elif len(s) >= 3:
+        return s + 'ing'
+    return s
+
+
 
 
 # E. not_bad
@@ -37,8 +42,11 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    nots = s.find("not")
+    bads = s.find("bad")
+    if bads > nots:
+        return s.replace(s[nots:bads + 3], 'good')
+    return s 
 
 
 # F. front_back
@@ -52,9 +60,13 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
-
+    a_mid = len(a) // 2
+    b_mid = len(b) // 2
+    if len(a) % 2:
+        a_mid += 1
+    if len(b) % 2:
+        b_mid += 1
+    return a[:a_mid] + b[:b_mid] + a[a_mid:] + b[b_mid:]
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
