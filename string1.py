@@ -28,9 +28,9 @@ __author__ = 'Tyrell Williams'
 
 
 def donuts(count):
-        if count >= 10:
-            return 'Number of donuts: many'
-        return f'Number of donuts: {count}'
+    if count >= 10:
+        return 'Number of donuts: many'
+    return f'Number of donuts: {count}'
 
 # B. both_ends
 # Given a string s, return a string made of the first 2
@@ -42,9 +42,9 @@ def donuts(count):
 
 
 def both_ends(s):
-        if len(s) <= 2:
-            return ''
-        return s[:2] + s[-2:]
+    if len(s) <= 2:
+        return ''
+    return s[:2] + s[-2:]
 
 
 # C. fix_start
@@ -74,7 +74,6 @@ def fix_start(s):
 
 def mix_up(a, b):
     return f"{b[:2]}{a[2:]} {a[:2]}{b[2:]}"
-
 
 
 # Provided simple test() function used in main() to print
